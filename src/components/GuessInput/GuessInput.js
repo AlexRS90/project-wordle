@@ -1,6 +1,6 @@
 import React from 'react';
 
-function GuessInput() {
+function GuessInput({handleResult}) {
   const [guess, setGuess] = React.useState('');
 
   function handleSubmit(event) {
@@ -9,6 +9,7 @@ function GuessInput() {
       window.alert("Please type 5 letters word. =D");
       return;
     }
+    handleResult(guess);
     console.log({guess});
     setGuess('');
   }
