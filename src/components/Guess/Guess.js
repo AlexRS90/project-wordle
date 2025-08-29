@@ -3,11 +3,11 @@ import { range } from '../../utils.js';
 import { checkGuess } from '../../game-helpers.js';
 
 function Cell({letter, status}){
-  const clasName = status ?
+  const className = status ?
   `cell ${status}` :
   "cell";
   return (
-    <span className={clasName}>
+    <span className={className}>
       {letter}
     </span>
   );
